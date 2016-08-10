@@ -19,18 +19,18 @@ public class PathFollowerSVC_impl extends PathFollowerPOA{
      * Methods corresponding to IDL attributes and operations
      */
     public RTC.RETURN_VALUE followPath(RTC.Path2D path) {
-        System.out.println("followPath calling");
-        return RTC.RETURN_VALUE.RETVAL_OK ;
+        //System.out.println("followPath calling");
+        return RTC.RETURN_VALUE.RETVAL_EMERGENCY_STOP ;
     }
 
     public RTC.RETURN_VALUE getState(RTC.FOLLOWER_STATEHolder state) {
-        System.out.println("getState calling");
-        return RTC.RETURN_VALUE.RETVAL_OK;
+        //System.out.println("getState calling");
+        return RTC.RETURN_VALUE.RETVAL_UNKNOWN_ERROR;
     }
 
     public RTC.RETURN_VALUE followPathNonBlock(RTC.Path2D path) {
-        System.out.println("followPathNonBlock calling");
-        return RTC.RETURN_VALUE.RETVAL_OK;
+        //System.out.println("followPathNonBlock calling");
+        return RTC.RETURN_VALUE.RETVAL_NOT_IMPL;
     }
 
 //  End of example implementational code
