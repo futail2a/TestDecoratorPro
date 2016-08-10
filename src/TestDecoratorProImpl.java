@@ -51,7 +51,7 @@ public class TestDecoratorProImpl extends DataFlowComponentBase {
         
         // Set service provider to Ports
         try {
-        	m_PathFollowerPort.registerProvider("PathFollower", "RTC.PathFollower", m_PathFollowerDecorator);
+        	m_PathFollowerPort.registerProvider("PathFollower", "RTC.PathFollower", m_PathFollower);
         } catch (ServantAlreadyActive e) {
             e.printStackTrace();
         } catch (WrongPolicy e) {
@@ -264,9 +264,8 @@ public class TestDecoratorProImpl extends DataFlowComponentBase {
     // <rtc-template block="service_declare">
     /*!
      */
-    //protected PathFollowerSVC_impl m_PathFollower = new PathFollowerSVC_impl();
-    protected PathFollowerSVC_impl m_PathFollowerDecorator = new PathFollowerDecorator();
-
+    protected PathFollowerSVC_impl m_PathFollower = new PathFollowerSVC_impl();
+    
     // </rtc-template>
 
     // Consumer declaration
